@@ -113,3 +113,92 @@ console.log(uppercase)
 
 //original array is unchanged
 //you are storing the values from map in a new array
+
+//check if some numbers are divisible by 7
+//some() will output true or false
+
+const divBy7 = nums.some(num => num % 7 === 0)
+if (divBy7) {
+    console.log('There is at least one number divisible by 7!')
+}
+
+// find if some words have the letter a in them
+// need to break the words into arrays of chars and loop through
+
+const hasA = panagram.some(word => word.includes('a') || word.includes('A'))
+    
+
+if (hasA) {
+    console.log('There is a word with the letter A!')
+}
+
+// add all numbers in the array together with reduce
+
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+let total = nums.reduce(reducer)
+console.log(total)
+
+//concatenate all the words using reduce
+
+let concat = panagram.reduce(reducer)
+console.log(concat)
+
+// sort works on the array in place
+
+nums.sort()
+console.log(nums)
+
+panagram.sort()
+console.log(panagram)
+
+
+// need to provide compare functions depending on the sort outcome we want
+
+function ascending(a, b) {
+    return a - b;
+  }
+
+function descending(a, b) {
+    return b - a;
+}
+
+nums.sort(ascending)
+console.log(nums)
+nums.sort(descending)
+console.log(nums)
+
+
+
+//these are from mozilla mdn, but remove '.name' after a because we are just using strings, not object properties
+// must use conditionals when comparing strings
+function alphabeticalAsc(a, b) {
+    var nameA = a.toUpperCase(); // ignore upper and lowercase
+    var nameB = b.toUpperCase(); // ignore upper and lowercase
+    if (nameA < nameB) {
+      return -1;
+    }
+    if (nameA > nameB) {
+      return 1;
+    }
+  
+    // names must be equal
+    return 0;
+  };
+
+  // must use conditionals when sorting strings
+  function alphabeticalDesc(a, b) {
+    var nameA = a.toUpperCase(); // ignore upper and lowercase
+    var nameB = b.toUpperCase(); // ignore upper and lowercase
+    if (nameA > nameB) {
+      return -1;
+    }
+    if (nameA < nameB) {
+      return 1;
+    }
+  
+    // names must be equal
+    return 0;
+  };
+
+
+
