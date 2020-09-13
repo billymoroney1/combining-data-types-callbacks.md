@@ -1,10 +1,10 @@
 const crayonBox = {
-    const crayons: ['red', 'purple', 'green']
+    crayons: ['red', 'purple', 'green']
 }
 
 const bottle = {
-    const cap: {
-        material: 'plastic';
+    cap: {
+        material: 'plastic'
     }
 }
 
@@ -12,8 +12,8 @@ console.log(bottle.cap.material)
 
 const receipt = [
     {
-        price: 5;
-        name: 'hummus';
+        price: 5,
+        name: 'hummus'
     }
 ]
 
